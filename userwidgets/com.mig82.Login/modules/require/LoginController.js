@@ -1,11 +1,13 @@
 define(function() {
 
 	function isValidEmail(email){
+		//TODO: Expose a field or function to allow the developer to set the password regex.
 		var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 		return regex.test(email);
 	}
 
 	function isValidPassword(password){
+		//TODO: Expose a field or function to allow the developer to set the password regex.
 		var regex = /^([a-zA-Z0-9@!#+%&$]{8,})$/;
 		return regex.test(password);
 	}
@@ -37,21 +39,24 @@ define(function() {
 		},
 
 		login: function _login(){
-
 			this.toggleMessageVisibility(false);
 			let user = this.view.userTextBox.text;
 			let password = this.view.passwordTextBox.text;
 
 			//If both the user and password fields have more than 4 characters each.
 			if(user && !isValidEmail(user)){
+				//TODO: Expose field for invalid password i18n.
 				this.showMessage('Type in a valid email');
+				amplify.publish("Login.invalidEmail");
 			}
 			else if(password && !isValidPassword(password)){
+				//TODO: Expose field for invalid password i18n.
 				this.showMessage('Type in a valid password');
+				amplify.publish("Login.invalidEmail");
 			}
 			else if(user && password && isValidEmail(user) & isValidPassword(password)){
-				//TODO: Log in and on success navigate to home.
-				$r.goto('home');
+				/*global amplify*/
+				amplify.publish("Login.valid", user, password);
 			}
 		},
 
