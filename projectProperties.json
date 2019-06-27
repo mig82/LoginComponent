@@ -257,11 +257,14 @@
     "codeGeneration": "false",
     "contacts": "false",
     "cordovaModified": false,
+    "cordovaVersionInfo": {
+        "useGlobalCordova": false
+    },
     "createdVizVersion": "8.4.22",
     "createdgaversion": "8.4.22",
     "currentgaversion": "8.4.22",
     "deeplinkkey": "None",
-    "defaultlocalekey": "",
+    "defaultlocalekey": "en_GB",
     "defaulttheme": "defaultTheme",
     "desktopwebaligenmentoption": "left",
     "desktopwebbasefontsize": "16",
@@ -354,7 +357,8 @@
     "isA11yConfigEnabled": false,
     "isDeveloperMode": "false",
     "isDpScaleFactor": true,
-    "isI18nConfigEnabled": false,
+    "isI18nConfigEnabled": true,
+    "isI18nLayoutConfigEnabled": false,
     "isMVC": true,
     "isNewAppWithRespectToAndroidPackageName": "true",
     "isNewAppWithRespectToAndroidWearPackageName": "true",
@@ -643,13 +647,16 @@
     "protectedmodeenabled_android": "false",
     "protectedmodeenabled_androidwear": "false",
     "protectedmodeenabled_ios": "false",
+    "prototype": {},
     "proximity": "false",
     "read_device_identifying_information": "false",
     "referenceWidth": "375",
     "registerForDeepLink": {
+        "androidwear": false,
         "desktop": false,
         "mobile": false,
-        "tablet": false
+        "tablet": false,
+        "watch": false
     },
     "remoteSystem": "false",
     "removableStorage": "false",

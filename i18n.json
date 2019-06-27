@@ -1,0 +1,53 @@
+{
+    "keys": [
+        "label.create.account",
+        "label.email",
+        "label.password"
+    ],
+    "locales": {
+        "en_GB": {
+            "i18nStrings": {
+                "label.create.account": "Open an account",
+                "label.email": "e-mail",
+                "label.password": "Password"
+            },
+            "isCustomLocale": false,
+            "isSelected": true,
+            "layoutConfig": {
+                "mirrorContentAlignment": false,
+                "mirrorFlexPositionProperties": false,
+                "mirrorFlowHorizontalAlignment": false
+            }
+        },
+        "es_ES": {
+            "i18nStrings": {
+                "label.create.account": "Abre una cuenta",
+                "label.email": "Correo electrónico",
+                "label.password": "Contraseña"
+            },
+            "isCustomLocale": false,
+            "isSelected": true,
+            "layoutConfig": {
+                "mirrorContentAlignment": false,
+                "mirrorFlexPositionProperties": false,
+                "mirrorFlowHorizontalAlignment": false
+            }
+        },
+        "xx_YY": {
+            "country": "None",
+            "i18nStrings": {
+                "label.create.account": "label.create.account",
+                "label.email": "label.email",
+                "label.password": "label.password"
+            },
+            "isCustomLocale": true,
+            "isSelected": true,
+            "language": "i18n keys",
+            "layoutConfig": {
+                "mirrorContentAlignment": false,
+                "mirrorFlexPositionProperties": false,
+                "mirrorFlowHorizontalAlignment": false
+            }
+        }
+    }
+}
