@@ -2,14 +2,18 @@
     "keys": [
         "label.create.account",
         "label.email",
-        "label.password"
+        "label.password",
+        "message.invalid_password",
+        "message.invalid_user"
     ],
     "locales": {
         "en_GB": {
             "i18nStrings": {
                 "label.create.account": "Open an account",
                 "label.email": "e-mail",
-                "label.password": "Password"
+                "label.password": "Password",
+                "message.invalid_password": "That's not a valid password.",
+                "message.invalid_user": "That's not a valid email address."
             },
             "isCustomLocale": false,
             "isSelected": true,
@@ -23,7 +27,9 @@
             "i18nStrings": {
                 "label.create.account": "Abre una cuenta",
                 "label.email": "Correo electrónico",
-                "label.password": "Contraseña"
+                "label.password": "Contraseña",
+                "message.invalid_password": "Eso no parece una contraseña válida",
+                "message.invalid_user": "Eso no parece una dirección de e-mail "
             },
             "isCustomLocale": false,
             "isSelected": true,
@@ -38,7 +44,9 @@
             "i18nStrings": {
                 "label.create.account": "label.create.account",
                 "label.email": "label.email",
-                "label.password": "label.password"
+                "label.password": "label.password",
+                "message.invalid_password": "message.invalid_password",
+                "message.invalid_user": "message.invalid_user"
             },
             "isCustomLocale": true,
             "isSelected": true,

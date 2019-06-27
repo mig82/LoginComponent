@@ -7,7 +7,26 @@
         },
         "events": {
             "custom": [],
-            "passthrough": []
+            "passthrough": [
+                {
+                    "access": "Enable",
+                    "group": "General",
+                    "kuid": "de402cfd901f4e6a9ddb1498cf2d1635",
+                    "originalPropertyKey": "onTouchEnd",
+                    "propertyIndex": 1,
+                    "propertyKey": "onRegister",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "action",
+                        "displayName": "onRegister",
+                        "srcWidget": "registerButton",
+                        "type": "action",
+                        "uiRepresentation": "Label-Label-Button-Button",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "hf8ca9a516cb4d098f958494178be391"
+                }
+            ]
         },
         "groups": {
             "apis": [],
@@ -19,7 +38,40 @@
             "widgets": []
         },
         "properties": {
-            "custom": [],
+            "custom": [
+                {
+                    "access": "Write",
+                    "defaultValue": "Invalid user",
+                    "group": "Settings",
+                    "kuid": "f194023c4e5e4ae284b3c97a39b6b84c",
+                    "originalPropertyKey": "invalidUserMessage",
+                    "propertyIndex": 4,
+                    "propertyKey": "invalidUserMessage",
+                    "pw": {
+                        "displayName": "Invalid User Text or i18n",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "e65cbd9ac3074677927e13fda26a3bf9",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "access": "Write",
+                    "defaultValue": "Invalid password",
+                    "group": "Settings",
+                    "kuid": "fe94e3e0033c46aba7492642af822691",
+                    "originalPropertyKey": "invalidPasswordMessage",
+                    "propertyIndex": 5,
+                    "propertyKey": "invalidPasswordMessage",
+                    "pw": {
+                        "displayName": "Invalid Password Text or i18n",
+                        "uiRepresentation": "Label-Textbox"
+                    },
+                    "srcWgtKUID": "e65cbd9ac3074677927e13fda26a3bf9",
+                    "type": "string",
+                    "value": ""
+                }
+            ],
             "passthrough": [
                 {
                     "access": "Enable",

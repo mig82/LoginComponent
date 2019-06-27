@@ -1,16 +1,8 @@
 define(function() {
 
-	function isValidEmail(email){
-		//TODO: Expose a field or function to allow the developer to set the password regex.
-		var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		return regex.test(email);
-	}
-
-	function isValidPassword(password){
-		//TODO: Expose a field or function to allow the developer to set the password regex.
-		var regex = /^([a-zA-Z0-9@!#+%&$]{8,})$/;
-		return regex.test(password);
-	}
+	//TODO: Expose fields or function to allow the developer to set the password regex.
+	const userRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	const passwordRegex = /^([a-zA-Z0-9@!#+%&$]{8,})$/;
 
 	return {
 		togglePasswordVisibility: function _togglePasswordVisibility(/*widget, x, y*/){
@@ -34,7 +26,12 @@ define(function() {
 		},
 
 		showMessage: function _showMessage(message){
-			this.view.messageLabel.text = message;
+			if(typeof kony.i18n.getLocalizedString2 === "function"){
+				this.view.messageLabel.text = kony.i18n.getLocalizedString2(message);
+			}
+			else{
+				this.view.messageLabel.text = kony.i18n.getLocalizedString(message);
+			}
 			this.toggleMessageVisibility(true);
 		},
 
@@ -44,17 +41,17 @@ define(function() {
 			let password = this.view.passwordTextBox.text;
 
 			//If both the user and password fields have more than 4 characters each.
-			if(user && !isValidEmail(user)){
+			if(user && !userRegex.test(user)){
 				//TODO: Expose field for invalid password i18n.
-				this.showMessage('Type in a valid email');
-				amplify.publish("Login.invalidEmail");
+				this.showMessage(this._invalidUserMessage);
+				amplify.publish("Login.invalidUser");
 			}
-			else if(password && !isValidPassword(password)){
+			else if(password && !passwordRegex.test(password)){
 				//TODO: Expose field for invalid password i18n.
-				this.showMessage('Type in a valid password');
-				amplify.publish("Login.invalidEmail");
+				this.showMessage(this._invalidPasswordMessage);
+				amplify.publish("Login.invalidPassword");
 			}
-			else if(user && password && isValidEmail(user) & isValidPassword(password)){
+			else if(user && password && userRegex.test(user) & passwordRegex.test(password)){
 				/*global amplify*/
 				amplify.publish("Login.valid", user, password);
 			}
@@ -74,6 +71,20 @@ define(function() {
 			this.view.onKeyboardDidHide = this.login;
 		},
 		//Logic for getters/setters of custom properties
-		initGettersSetters: function() {}
+		initGettersSetters: function() {
+			defineGetter(this, "invalidUserMessage", function () {
+				return this._invalidUserMessage;
+			});
+			defineSetter(this, "invalidUserMessage", function (message) {
+				this._invalidUserMessage = message;
+			});
+
+			defineGetter(this, "invalidPasswordMessage", function () {
+				return this._invalidPasswordMessage;
+			});
+			defineSetter(this, "invalidPasswordMessage", function (message) {
+				this._invalidPasswordMessage = message;
+			});
+		}
 	};
 });

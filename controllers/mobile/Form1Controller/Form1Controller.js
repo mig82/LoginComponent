@@ -18,7 +18,7 @@ define(function(){
 		postShow: function(){
 			/*global amplify*/
 			amplify.subscribe("Login.valid", login);
-			amplify.subscribe("Login.invalidEmail", countLoginAttempt);
+			amplify.subscribe("Login.invalidUser", countLoginAttempt);
 			amplify.subscribe("Login.invalidPassword", countLoginAttempt);
 		},
 		onNavigate: function(){
