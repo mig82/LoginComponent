@@ -2,7 +2,7 @@ define(function() {
 
 	//TODO: Expose fields or function to allow the developer to set the password regex.
 	const userRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-	const passwordRegex = /^([a-zA-Z0-9@!#+%&$]{8,})$/;
+	const passwordRegex = /^([a-zA-Z0-9@!#+%&$]{2,})$/;
 
 	return {
 		togglePasswordVisibility: function _togglePasswordVisibility(/*widget, x, y*/){
@@ -55,6 +55,11 @@ define(function() {
 				/*global amplify*/
 				amplify.publish("Login.valid", user, password);
 			}
+		},
+
+		setMessage: function(message){
+			this.view.messageLabel.text = message;
+			this.view.messageLabel.isVisible = true;
 		},
 
 		constructor: function(/*baseConfig, layoutConfig, pspConfig*/) {

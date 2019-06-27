@@ -2,7 +2,24 @@
     "classname": "Login",
     "definitions": {
         "apis": {
-            "custom": [],
+            "custom": [
+                {
+                    "group": "General",
+                    "kuid": "ee923e33d34c4f09a23ab7765b89d173",
+                    "paramList": [
+                        {
+                            "name": "message"
+                        }
+                    ],
+                    "propertyKey": "setMessage",
+                    "pw": {
+                        "displayName": "setMessage",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "e65cbd9ac3074677927e13fda26a3bf9",
+                    "type": "event"
+                }
+            ],
             "passthrough": []
         },
         "events": {
@@ -29,7 +46,9 @@
             ]
         },
         "groups": {
-            "apis": [],
+            "apis": [
+                "General"
+            ],
             "events": [],
             "properties": [
                 "Look & Feel",
@@ -43,7 +62,7 @@
                     "access": "Write",
                     "defaultValue": "Invalid user",
                     "group": "Settings",
-                    "kuid": "f194023c4e5e4ae284b3c97a39b6b84c",
+                    "kuid": "c8b8a77adffc4a48aabf1563c81dbdd7",
                     "originalPropertyKey": "invalidUserMessage",
                     "propertyIndex": 4,
                     "propertyKey": "invalidUserMessage",
@@ -59,7 +78,7 @@
                     "access": "Write",
                     "defaultValue": "Invalid password",
                     "group": "Settings",
-                    "kuid": "fe94e3e0033c46aba7492642af822691",
+                    "kuid": "a74cceef096645ccb54b7a81e411e361",
                     "originalPropertyKey": "invalidPasswordMessage",
                     "propertyIndex": 5,
                     "propertyKey": "invalidPasswordMessage",
@@ -264,6 +283,25 @@
                 },
                 {
                     "access": "Enable",
+                    "group": "Settings",
+                    "kuid": "f59c3c26858340d7a6c9b226091a4d18",
+                    "originalPropertyKey": "text",
+                    "propertyIndex": 6,
+                    "propertyKey": "message",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "look",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Failed Login Message",
+                        "srcWidget": "messageLabel",
+                        "type": "string",
+                        "uiRepresentation": "Label-Textbox",
+                        "wType": "Label"
+                    },
+                    "srcWgtKUID": "f97fe5c440b24ac78fe0d5ae72f38df7"
+                },
+                {
+                    "access": "Enable",
                     "group": "Look & Feel",
                     "kuid": "a49579d02b514baaa4c368aa59d71c61",
                     "originalPropertyKey": "text",
@@ -401,6 +439,24 @@
                         "wType": "TextField"
                     },
                     "srcWgtKUID": "f77abfee76bb4b7d984c829f5e29e5e4"
+                },
+                {
+                    "access": "Enable",
+                    "defaultSkinKUID": "s84816c6ea3b4a0ab802dbdee65987f5",
+                    "group": "Look & Feel",
+                    "kuid": "id3a990c077f4bb0b42c3be8fa825511",
+                    "originalPropertyKey": "focusSkin",
+                    "propertyIndex": 16,
+                    "propertyKey": "registrationButtonFocusSkin",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "skin",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Registration Button Focus Skin",
+                        "srcWidget": "registerButton",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "hf8ca9a516cb4d098f958494178be391"
                 }
             ]
         },
