@@ -56,6 +56,10 @@ define(function() {
 		},
 
 		constructor: function(/*baseConfig, layoutConfig, pspConfig*/) {
+
+			//Hide the message label. It's visible for design purposes only.
+			this.view.messageLabel.isVisible = false;
+
 			//Bind the eye icon to show or hide the password.
 			this.view.showPasswordButton.onTouchEnd = this.togglePasswordVisibility;
 
