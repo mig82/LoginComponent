@@ -119,19 +119,10 @@ define(function() {
 		//Logic for getters/setters of custom properties
 		initGettersSetters: function() {
 
-			[
+			kony.mvc.genAccessors(this, [
 				"invalidUserMessage",
 				"invalidPasswordMessage"
-			]
-			.forEach((fieldName) => {
-				var internalFieldName = "_" + fieldName;
-				defineGetter(this, fieldName, function () {
-					return this[internalFieldName];
-				});
-				defineSetter(this, fieldName, function (message) {
-					this[internalFieldName] = message;
-				});
-			});
+			]);
 		}
 	};
 });
