@@ -5,15 +5,39 @@
             "custom": [
                 {
                     "group": "General",
-                    "kuid": "ee923e33d34c4f09a23ab7765b89d173",
+                    "kuid": "d94d13682f5c4f23b2c95454eba18da8",
                     "paramList": [
                         {
                             "name": "message"
                         }
                     ],
-                    "propertyKey": "setMessage",
+                    "propertyKey": "showMessage",
                     "pw": {
-                        "displayName": "setMessage",
+                        "displayName": "showMessage",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "e65cbd9ac3074677927e13fda26a3bf9",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "dfa7249c45634868951e91d43520ef54",
+                    "paramList": [],
+                    "propertyKey": "preShow",
+                    "pw": {
+                        "displayName": "preShow",
+                        "uiRepresentation": "Label-Label-Button-Button"
+                    },
+                    "srcWgtKUID": "e65cbd9ac3074677927e13fda26a3bf9",
+                    "type": "event"
+                },
+                {
+                    "group": "General",
+                    "kuid": "b9e0178b70e24dacad2122c7266f3aa5",
+                    "paramList": [],
+                    "propertyKey": "postShow",
+                    "pw": {
+                        "displayName": "postShow",
                         "uiRepresentation": "Label-Label-Button-Button"
                     },
                     "srcWgtKUID": "e65cbd9ac3074677927e13fda26a3bf9",
@@ -24,26 +48,7 @@
         },
         "events": {
             "custom": [],
-            "passthrough": [
-                {
-                    "access": "Enable",
-                    "group": "General",
-                    "kuid": "de402cfd901f4e6a9ddb1498cf2d1635",
-                    "originalPropertyKey": "onTouchEnd",
-                    "propertyIndex": 1,
-                    "propertyKey": "onRegister",
-                    "pw": {
-                        "access": "readwrite",
-                        "category": "action",
-                        "displayName": "onRegister",
-                        "srcWidget": "registerButton",
-                        "type": "action",
-                        "uiRepresentation": "Label-Label-Button-Button",
-                        "wType": "Button"
-                    },
-                    "srcWgtKUID": "hf8ca9a516cb4d098f958494178be391"
-                }
-            ]
+            "passthrough": []
         },
         "groups": {
             "apis": [
@@ -62,7 +67,7 @@
                     "access": "Write",
                     "defaultValue": "Invalid user",
                     "group": "Settings",
-                    "kuid": "c8b8a77adffc4a48aabf1563c81dbdd7",
+                    "kuid": "bcc7f3a42ff9445bbfe184c0b5a235c2",
                     "originalPropertyKey": "invalidUserMessage",
                     "propertyIndex": 4,
                     "propertyKey": "invalidUserMessage",
@@ -78,7 +83,7 @@
                     "access": "Write",
                     "defaultValue": "Invalid password",
                     "group": "Settings",
-                    "kuid": "a74cceef096645ccb54b7a81e411e361",
+                    "kuid": "f84ba4a9eaff45db8d239295fa2e0788",
                     "originalPropertyKey": "invalidPasswordMessage",
                     "propertyIndex": 5,
                     "propertyKey": "invalidPasswordMessage",
@@ -208,42 +213,6 @@
                         "wType": "Label"
                     },
                     "srcWgtKUID": "c6d1d4650bc74360ad9eb8d169baacb4"
-                },
-                {
-                    "access": "Enable",
-                    "group": "Settings",
-                    "kuid": "c398080a4ec94249a0f00205284c796b",
-                    "originalPropertyKey": "text",
-                    "propertyIndex": 3,
-                    "propertyKey": "registrationText",
-                    "pw": {
-                        "access": "readwrite",
-                        "category": "look",
-                        "dependentKeysKUIDs": null,
-                        "displayName": "Register Button Text or i18n",
-                        "srcWidget": "registerButton",
-                        "type": "string",
-                        "uiRepresentation": "Label-Textbox",
-                        "wType": "Button"
-                    },
-                    "srcWgtKUID": "hf8ca9a516cb4d098f958494178be391"
-                },
-                {
-                    "access": "Enable",
-                    "group": "Look & Feel",
-                    "kuid": "bd9df5d2bcb0435e9dc6bc0442104302",
-                    "originalPropertyKey": "skin",
-                    "propertyIndex": 4,
-                    "propertyKey": "registrationButtonSkin",
-                    "pw": {
-                        "access": "readwrite",
-                        "category": "skin",
-                        "dependentKeysKUIDs": null,
-                        "displayName": "Registration Button Skin",
-                        "srcWidget": "registerButton",
-                        "wType": "Button"
-                    },
-                    "srcWgtKUID": "hf8ca9a516cb4d098f958494178be391"
                 },
                 {
                     "access": "Enable",
@@ -442,21 +411,39 @@
                 },
                 {
                     "access": "Enable",
-                    "defaultSkinKUID": "s84816c6ea3b4a0ab802dbdee65987f5",
+                    "defaultSkinKUID": "s849fda69c8145c4a832fcb71b9a0cd4",
                     "group": "Look & Feel",
-                    "kuid": "id3a990c077f4bb0b42c3be8fa825511",
+                    "kuid": "afb7ea4de75b452d92b5a7097b30c0e6",
                     "originalPropertyKey": "focusSkin",
-                    "propertyIndex": 16,
-                    "propertyKey": "registrationButtonFocusSkin",
+                    "propertyIndex": 17,
+                    "propertyKey": "loginButtonFocusSkin",
                     "pw": {
                         "access": "readwrite",
                         "category": "skin",
                         "dependentKeysKUIDs": null,
-                        "displayName": "Registration Button Focus Skin",
-                        "srcWidget": "registerButton",
+                        "displayName": "Login Button Focus Skin",
+                        "srcWidget": "loginButton",
                         "wType": "Button"
                     },
-                    "srcWgtKUID": "hf8ca9a516cb4d098f958494178be391"
+                    "srcWgtKUID": "f9b01d96766849cc8ab33be4aca34b58"
+                },
+                {
+                    "access": "Enable",
+                    "defaultSkinKUID": "s1077385408448ceaa602423dd1a2ad0",
+                    "group": "Look & Feel",
+                    "kuid": "ea345694779747168275d0e032217c2e",
+                    "originalPropertyKey": "skin",
+                    "propertyIndex": 18,
+                    "propertyKey": "loginButtonSkin",
+                    "pw": {
+                        "access": "readwrite",
+                        "category": "skin",
+                        "dependentKeysKUIDs": null,
+                        "displayName": "Login Button Skin",
+                        "srcWidget": "loginButton",
+                        "wType": "Button"
+                    },
+                    "srcWgtKUID": "f9b01d96766849cc8ab33be4aca34b58"
                 }
             ]
         },

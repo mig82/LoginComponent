@@ -1,6 +1,7 @@
 {
     "keys": [
-        "label.create.account",
+        "action.login",
+        "action.register",
         "label.email",
         "label.password",
         "message.invalid_password",
@@ -9,7 +10,8 @@
     "locales": {
         "en_GB": {
             "i18nStrings": {
-                "label.create.account": "Open an account",
+                "action.login": "Sign in",
+                "action.register": "Open an account",
                 "label.email": "e-mail",
                 "label.password": "Password",
                 "message.invalid_password": "That's not a valid password.",
@@ -25,7 +27,8 @@
         },
         "es_ES": {
             "i18nStrings": {
-                "label.create.account": "Abre una cuenta",
+                "action.login": "Entrar",
+                "action.register": "Abre una cuenta",
                 "label.email": "Correo electrónico",
                 "label.password": "Contraseña",
                 "message.invalid_password": "Eso no parece una contraseña válida",
@@ -42,7 +45,8 @@
         "xx_YY": {
             "country": "None",
             "i18nStrings": {
-                "label.create.account": "label.create.account",
+                "action.login": "action.login",
+                "action.register": "action.register",
                 "label.email": "label.email",
                 "label.password": "label.password",
                 "message.invalid_password": "message.invalid_password",

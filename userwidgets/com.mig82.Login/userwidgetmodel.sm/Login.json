@@ -3,7 +3,7 @@
     "__parentReadjusting__": false,
     "_height_": {
         "type": "string",
-        "value": "220dp"
+        "value": "229dp"
     },
     "_left_": {
         "type": "string",
@@ -33,11 +33,13 @@
         "value": "100%"
     },
     "allboxes": [],
+    "autogrowmode": 0,
     "canUpdateUI": true,
     "children": [
         "userFlex",
         "passwordFlex",
         "messageLabel",
+        "loginButton",
         "registerButton"
     ],
     "clipbounds": true,

@@ -9,12 +9,13 @@
     "font_size": 120,
     "isForked": false
   },
-  "background_color": "4b88f100",
+  "background_color": "7417e6ff",
   "bg_type": "one",
-  "border_color": "ffffffff",
-  "border_style": "plain",
+  "border_color": "7417e6ff",
+  "border_radius": 100,
+  "border_style": "custom",
   "border_type": 0,
-  "border_width": 0,
+  "border_width": 1,
   "desktopweb": {
     "font_name": "Karbon-Regular",
     "font_size": 120,
@@ -42,7 +43,7 @@
     "font_size": 120,
     "isForked": false
   },
-  "kuid": "se3f8b4faf684ae5a47c7b29e085b916",
+  "kuid": "s849fda69c8145c4a832fcb71b9a0cd4",
   "spaan": {
     "font_name": "DbxKarbonLight",
     "font_size": 120,

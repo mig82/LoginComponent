@@ -4,7 +4,7 @@
     "__parentReadjusting__": false,
     "_bottom_": {
         "type": "string",
-        "value": "0dp"
+        "value": "40dp"
     },
     "_height_": {
         "type": "string",
@@ -26,11 +26,11 @@
         "type": "string",
         "value": "20dp"
     },
-    "_skin_": "se3f8b4faf684ae5a47c7b29e085b916",
-    "_text_": "Register",
+    "_skin_": "s1077385408448ceaa602423dd1a2ad0",
+    "_text_": "Go",
     "_width_": {
         "type": "string",
-        "value": "100%"
+        "value": "90%"
     },
     "canUpdateUI": true,
     "centerx": {
@@ -40,18 +40,18 @@
     "containerweight": 100,
     "contentalignment": 5,
     "displaytext": true,
-    "focusskin": "s84816c6ea3b4a0ab802dbdee65987f5",
-    "id": "registerButton",
+    "focusskin": "s849fda69c8145c4a832fcb71b9a0cd4",
+    "id": "loginButton",
     "info": null,
     "iscustomlayout": false,
     "isvisible": true,
-    "kuid": "hf8ca9a516cb4d098f958494178be391",
+    "kuid": "f9b01d96766849cc8ab33be4aca34b58",
     "name": "kony.ui.Button",
     "parent": "Login",
     "pf": "userwidgetmodel",
     "retaincontentalignment": false,
     "retainflexpositionproperties": false,
-    "texti18n": "action.register",
+    "texti18n": "action.login",
     "wType": "Button",
     "zindex": 1
 }
