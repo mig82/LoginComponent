@@ -118,18 +118,19 @@ define(function() {
 
 		//Logic for getters/setters of custom properties
 		initGettersSetters: function() {
-			defineGetter(this, "invalidUserMessage", function () {
-				return this._invalidUserMessage;
-			});
-			defineSetter(this, "invalidUserMessage", function (message) {
-				this._invalidUserMessage = message;
-			});
 
-			defineGetter(this, "invalidPasswordMessage", function () {
-				return this._invalidPasswordMessage;
-			});
-			defineSetter(this, "invalidPasswordMessage", function (message) {
-				this._invalidPasswordMessage = message;
+			[
+				"invalidUserMessage",
+				"invalidPasswordMessage"
+			]
+			.forEach((fieldName) => {
+				var internalFieldName = "_" + fieldName;
+				defineGetter(this, fieldName, function () {
+					return this[internalFieldName];
+				});
+				defineSetter(this, fieldName, function (message) {
+					this[internalFieldName] = message;
+				});
 			});
 		}
 	};
